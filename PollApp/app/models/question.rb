@@ -1,6 +1,16 @@
+# == Schema Information
+#
+# Table name: questions
+#
+#  id         :integer          not null, primary key
+#  body       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Question < ApplicationRecord
 
-  belongs_to: :poll,
+  belongs_to :poll,
     primary_key: :id,
     foreign_key: :question_id,
     class_name: :Poll
